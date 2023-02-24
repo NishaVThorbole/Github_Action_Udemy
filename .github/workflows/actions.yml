@@ -1,3 +1,20 @@
-# name: Actions Workflows
+ name: Actions Workflows
 
-# on: [push]
+ on: [push]
+
+#use simple action to print Hello +InputString javascript action
+ jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple js acion
+      #using below action it will print Hello and some input string
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+      #To give input string we used with and who-to-greet  
+        with: 
+          who-to-greet: Nisha
+      #If u want to print the log for that u have use id 
+      - name: Log Greeting Time
+        run: echo "${{steps.greet.outputs.time}}"
+          
