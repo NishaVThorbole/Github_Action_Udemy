@@ -11,6 +11,12 @@
         run: |
            ls
            pwd
+           echo $GITHUB_SHA
+           echo $GITHUB_REPOSITORY
+           echo $GITHUB_WORKSPACE
+           echo "${{ github.token }}"
+           #git clone git@github:$GITHUB_REPOSITORY
+           #git checkout $GITHUB_SHA
            
       #clone your repository into your virtual machine for we used chekout action
       #it is offficial action means created by github
