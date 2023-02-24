@@ -1,6 +1,6 @@
  name: Actions Workflows
 
- on: [push]
+ on: [push, pull_request]
 
 #use simple action to print Hello +InputString javascript action
  jobs:
