@@ -7,6 +7,22 @@
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List of the files
+        run: |
+           ls
+           pwd
+           
+      #clone your repository into your virtual machine for we used chekout action
+      #it is offficial action means created by github
+      #
+      - name: Checkout
+        uses: actions/checkout@v1
+      #after checkout  
+      - name: List of the files
+        run: |
+           ls -a
+           pwd  
+        
       - name: Simple js acion
       #using below action it will print Hello and some input string
         id: greet
