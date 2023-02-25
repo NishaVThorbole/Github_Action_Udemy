@@ -2,10 +2,12 @@
 
  #on: [push, pull_request]
  on:
-    push:
-    pull_request:
-     types: [closed, assigned, opened, reopened]
-    
+    #push:
+    #pull_request:
+    # types: [closed, assigned, opened, reopened]
+    schedule:
+      - cron: "0/2 * * * *"
+      - cron: "0/5 * * * *"
 
 #use simple action to print Hello +InputString javascript action
  jobs:
