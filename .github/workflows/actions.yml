@@ -2,12 +2,28 @@
 
  #on: [push, pull_request]
  on:
+  push:
+    branches:
+      - main #for main branch
+      - 'feature/*' #matches features/featA,feature/featB
+      #doesn't match feature/feat/A
+      - 'feature/**'
+      - '!feature/featc' #ignor the branch
+    tags:
+     - v1.*
+    paths:
+     - '**.js'
+     
+#branches-ignore:
+      #- null #we can't use branches and branches ignor same time
+ #its is used to trigger manually and using api also u can trigger
+    #repository_dispatch:
     #push:
     #pull_request:
     # types: [closed, assigned, opened, reopened]
-    schedule:
-      - cron: "0/5 * * * *"
-      - cron: "0/8 * * * *"
+    #schedule:
+    #  - cron: "0/5 * * * *"
+     # - cron: "0/8 * * * *"
 
 #use simple action to print Hello +InputString javascript action
  jobs:
