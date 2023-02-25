@@ -5,14 +5,14 @@
   push:
     branches:
       - main #for main branch
-      - 'feature/*' #matches features/featA,feature/featB
+      #- 'feature/*' #matches features/featA,feature/featB
       #doesn't match feature/feat/A
-      - 'feature/**'
-      - '!feature/featc' #ignor the branch
-    tags:
-     - v1.*
-    paths:
-     - '**.js'
+    #  - 'feature/**'
+    #  - '!feature/featc' #ignor the branch
+   # tags:
+   #  - v1.*
+   # paths:
+    # - '**.js'
      
 #branches-ignore:
       #- null #we can't use branches and branches ignor same time
