@@ -1,10 +1,10 @@
  name: Actions Workflows
 
  #on: [push, pull_request]
- on:
-  push:
-    branches:
-      - main #for main branch
+ #on:
+ # push:
+   # branches:
+   #   - main #for main branch
       #- 'feature/*' #matches features/featA,feature/featB
       #doesn't match feature/feat/A
     #  - 'feature/**'
